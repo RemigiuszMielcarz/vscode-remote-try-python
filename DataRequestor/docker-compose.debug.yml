@@ -13,3 +13,7 @@ services:
       - 5678:5678
     environment:
       - LOCATION_NAME=Wrocław
+      - BROKER_URL=46.101.108.102
+      - BROKER_PORT=1883
+      - USERNAME=student
+      - PASSWORD=sys-wbud
