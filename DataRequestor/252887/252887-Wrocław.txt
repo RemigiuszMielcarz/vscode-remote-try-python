@@ -1,0 +1,1 @@
+{'location': 'Wrocław', 'timestamp': '2024-01-10T09:14:57.354861', 'values': [{'parameter': 'pm10', 'value': 23.0, 'lastUpdated': '2024-01-11T03:00:00+00:00', 'unit': 'µg/m³'}, {'parameter': 'no2', 'value': 0.025, 'lastUpdated': '2024-01-11T03:00:00+00:00', 'unit': 'ppm'}, {'parameter': 'co', 'value': 0.48, 'lastUpdated': '2024-01-11T03:00:00+00:00', 'unit': 'ppm'}]}

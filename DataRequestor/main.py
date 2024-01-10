@@ -54,9 +54,9 @@ class WeatherRequester:
 
 
 # Define the function to handle subscription in a separate thread
-def start_mqtt_subscriber(broker_url, broker_port, username, password, topic):
+def start_mqtt_subscriber(broker_url, broker_port, username, password):
     mqtt_subscriber = MqttSubscriber(broker_url, broker_port, username, password)
-    mqtt_subscriber.subscribe(topic)
+    mqtt_subscriber.subscribe()
     mqtt_subscriber.client.loop_forever()
 
 
@@ -79,8 +79,8 @@ if __name__ == "__main__":
     mqtt_publisher = MqttPublisher(broker_url, broker_port, username, password)
 
     # Start the MQTT subscriber in a separate thread
-    subscriber_topic = f"{location_id}/{location}"
-    subscriber_thread = threading.Thread(target=start_mqtt_subscriber, args=(broker_url, broker_port, username, password, subscriber_topic))
+    # subscriber_topic = f"252887/+/{location}"
+    subscriber_thread = threading.Thread(target=start_mqtt_subscriber, args=(broker_url, broker_port, username, password))
     subscriber_thread.daemon = True  # This will allow the main program to exit even if the thread is running
     subscriber_thread.start()
 
@@ -90,6 +90,6 @@ if __name__ == "__main__":
                 if weather_data:
                     formatted_data = weather_requester.format_data(weather_data)
                     print(formatted_data)
-                    topic = f"{location_id}/{location}"
+                    topic = f"252887/{location}"
                     mqtt_publisher.publish(topic, str(formatted_data))
                 time.sleep(30)

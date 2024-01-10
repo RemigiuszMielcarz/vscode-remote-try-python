@@ -1,1 +1,0 @@
-{'location': 'Wrocław', 'timestamp': '2023-12-13T09:45:25.580254', 'values': [{'parameter': 'pm10', 'value': 28.0, 'lastUpdated': '2023-12-14T03:00:00+00:00', 'unit': 'µg/m³'}, {'parameter': 'no2', 'value': 0.021, 'lastUpdated': '2023-12-14T03:00:00+00:00', 'unit': 'ppm'}, {'parameter': 'co', 'value': 0.52, 'lastUpdated': '2023-12-14T03:00:00+00:00', 'unit': 'ppm'}]}

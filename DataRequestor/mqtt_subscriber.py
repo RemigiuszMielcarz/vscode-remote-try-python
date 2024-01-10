@@ -39,6 +39,7 @@ class MqttSubscriber:
             print(f"Invalid topic format: {topic}")
 
 
-    def subscribe(self, topic):
-        self.client.subscribe(topic)
+    def subscribe(self):
+        wildcard_topic = "+/+"
+        self.client.subscribe(wildcard_topic)
         self.client.loop_forever()
